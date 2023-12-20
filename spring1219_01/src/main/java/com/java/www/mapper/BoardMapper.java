@@ -14,15 +14,28 @@ public interface BoardMapper {
 
 	//게시글1개 가져오기 - 현재글
 	BoardDto selectOne(int bno);
-
 	//게시글1개 가져오기 - 이전글
 	BoardDto selectOnePrev(int bno);
-
 	//게시글1개 가져오기 - 다음글
 	BoardDto selectOneNext(int bno);
+	//조회수 1 증가
+	void bHitUp(int bno);
 
 	//글쓰기 저장
 	int bInsert(BoardDto bdto);
+
+	//게시글 삭제
+	int bDelete(int bno);
+
+	//게시글 수정 저장
+	int doBUpdate(BoardDto bdto);
+
+	//답글달기 저장
+	//다른 게시글 bstep 1 증가
+	int doBReply(BoardDto bdto);
+	void bStepUp(BoardDto bdto);
+
+	
 	
 	
 	

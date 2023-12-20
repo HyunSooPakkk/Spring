@@ -15,7 +15,7 @@ public class BoardDto {
 	
 	private int bno;
 	private String btitle;
-	private String bcontent;
+	private String bcont;
 	private Timestamp bdate;
 	private String id;
 	private int bgroup;  //정렬-답글달기

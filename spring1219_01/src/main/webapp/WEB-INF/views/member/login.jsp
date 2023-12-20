@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <title>Title</title>
+    <title>Login</title>
     <style>
         *{ margin: 0; padding: 0; }
         body{ position: relative;height: 100%;background: #f5f6f7;}

@@ -31,6 +31,9 @@ public class BServiceImpl implements BService {
 		BoardDto prevdto = boardMapper.selectOnePrev(bno);
 		BoardDto nextdto = boardMapper.selectOneNext(bno);
 		
+		//조회수 1 증가
+		boardMapper.bHitUp(bno);
+		
 		Map<String, Object> map = new HashMap<>();
 		map.put("bdto", bdto);
 		map.put("prevdto", prevdto);
@@ -39,12 +42,39 @@ public class BServiceImpl implements BService {
 		return map;
 	}
 
+	//글쓰기 저장
 	@Override
 	public void bInsert(BoardDto bdto) {
-		// 글쓰기 저장
 		int result = boardMapper.bInsert(bdto);
 		System.out.println("bServiceImpl result : "+result);
 		
+		
+	}
+
+	//게시글 삭제
+	@Override
+	public void bDelete(int bno) {
+		int result = boardMapper.bDelete(bno);
+		System.out.println("bServiceImpl bDelete result: "+result);
+		
+	}
+
+	//게시글 수정 저장
+	@Override
+	public void doBUpdate(BoardDto bdto) {
+		int result = boardMapper.doBUpdate(bdto);
+		System.out.println("bServiceImpl doBUpdate result : "+result);
+		
+	}
+
+	//답글달기 저장 - bgroup, bstep, bindent
+	//1. 부모보다 큰 bstep은 1씩 증가시킴
+	//2. 현재 답글의 bgroup=부모bgroup, bstep=부모bstep+1, ,bindent=부모bindent+1 
+	@Override
+	public void doBReply(BoardDto bdto) {
+		boardMapper.bStepUp(bdto);
+		int result = boardMapper.doBReply(bdto);
+		System.out.println("bServiceImpl doBReply result : "+result);
 		
 	}
 
