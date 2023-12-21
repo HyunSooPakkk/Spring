@@ -4,14 +4,23 @@
 
 <!-- MemberMapper.java 연결 -->
 <mapper namespace="com.java.www.mapper.BoardMapper">
-   <!-- 게시글전체 가져오기 -->
+   <!-- 게시글 전체 가져오기 -->
    <select id="selectAll" resultType="com.java.www.dto.BoardDto">
-       <![CDATA[
+       
        select * from ( select rownum rnum, a.* from
-       ( select * from board order by bgroup desc,bstep asc ) a )
-       where rnum>=1 and rnum<=20
-       ]]>
+       ( select * from board
+       <if test="category=='btitle' or category=='bcont'">
+        where ${category} like '%'||#{searchWord}||'%'
+       </if>
+       <if test="category=='all'">
+        where btitle like '%'||#{searchWord}||'%' or bcont like '%'||#{searchWord}||'%'
+       </if>
+       
+       order by bgroup desc,bstep asc ) a )
+       where rnum between #{startRow} and #{endRow}
+       
    </select>
+   
    
    <!-- 게시글1개 가져오기 : 현재글 -->
    <select id="selectOne" resultType="com.java.www.dto.BoardDto">
@@ -66,6 +75,18 @@
     <update id="bHitUp">
       update board set bhit=bhit+1 where bno=#{bno} 	
     </update>
+    
+    <!-- 게시글 총 개수 null, all, btitle, bcont -->
+	<select id="selectCountAll" resultType="int">
+		select count(*) from board
+	   <if test="category=='btitle' or category=='bcont'">
+        where ${category} like '%'||#{searchWord}||'%'
+       </if>
+       <if test="category=='all'">
+        where btitle like '%'||#{searchWord}||'%' or bcont like '%'||#{searchWord}||'%'
+       </if>
+	</select>
+    
 	
 
 </mapper>

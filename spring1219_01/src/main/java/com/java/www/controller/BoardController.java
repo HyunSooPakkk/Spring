@@ -26,19 +26,39 @@ public class BoardController {
 	@Autowired
 	BService bService;
 	
-	@GetMapping("bList") //게시글전체 가져오기
-	public String bList(Model model) {
+	@GetMapping("search") //게시글 검색
+	public String search(@RequestParam(defaultValue = "1") int page,
+			@RequestParam(required = false) String category,
+			@RequestParam(required = false) String searchWord, Model model) {
+		
+		System.out.println("BController search category: "+category);
+		System.out.println("BController search searchWord: "+searchWord);
+		
 		//db에서 가져오기
-		ArrayList<BoardDto> list = bService.selectAll();
+		Map<String, Object> map = bService.selectSearchCount(page, category, searchWord);
 		//model 저장
-		model.addAttribute("list", list);
-		System.out.println("list개수 : "+list.size());
+		model.addAttribute("map", map);
+		System.out.println("게시글 총 개수 : "+(int)map.get("countAll"));
+		
+		return "board/bList";
+	}//search
+	
+	@GetMapping("bList") //게시글 전체 가져오기
+	public String bList(@RequestParam(defaultValue = "1") int page,
+			@RequestParam(required = false) String category,
+			@RequestParam(required = false) String searchWord, Model model) {
+		
+		//db에서 가져오기
+		Map<String, Object> map = bService.selectAll(page, category, searchWord);
+		//model 저장
+		model.addAttribute("map", map);
+		System.out.println("게시글 총 개수 : "+(int)map.get("countAll"));
 		
 		return "board/bList";
 	}//bList
 	
-	@GetMapping("bView") //게시글1개 가져오기
-	public String bView(@RequestParam(defaultValue = "1") int bno,Model model) {
+	@GetMapping("bView") //게시글 1개 가져오기
+	public String bView(@RequestParam(defaultValue = "1") int bno, Model model) {
 		System.out.println("BController bno : "+bno);
 		//db에서 가져오기
 		Map<String, Object> map = bService.selectOne(bno);
@@ -53,8 +73,8 @@ public class BoardController {
 		return "board/bInsert";
 	}
 	
-	@PostMapping("bInsert") //글쓰기 저장
-	public String bInsert(BoardDto bdto,@RequestPart MultipartFile files, 
+	@PostMapping("doBInsert") //글쓰기 저장
+	public String doBInsert(BoardDto bdto,@RequestPart MultipartFile files, 
 			Model model) throws Exception {
 		//MultipartFile files - input type="file" name="files" name을 가져옴.
 		//파일첨부의 파일이름
@@ -94,7 +114,7 @@ public class BoardController {
 		return "board/bUpdate";
 	}
 	
-	@PostMapping("doBUpdate")    //게시글 수정 저장
+	@PostMapping("doBUpdate")    //게시글 수정내용 저장
 	public String doBUpdate(BoardDto bdto, @RequestPart MultipartFile files) throws Exception {
 		//bdto >> bfile도 추가되어있음
 		System.out.println("BController doBUpdate bno: "+bdto.getBno());
@@ -155,24 +175,27 @@ public class BoardController {
 	//-------------------------------다중업로드------------------------------------
 	
 	@GetMapping("bList2") //게시글전체 가져오기
-	public String bList2(Model model) {
+	public String bList2(@RequestParam(defaultValue = "1") int page,
+			@RequestParam(required = false) String category,
+			@RequestParam(required = false) String searchWord, Model model) {
 		//db에서 가져오기
-		ArrayList<BoardDto> list = bService.selectAll();
+		Map<String, Object> map = bService.selectAll(page, category, searchWord);
 		//model 저장
-		model.addAttribute("list",list);
-		System.out.println("list개수 : "+list.size());
+		model.addAttribute("map", map);
+		System.out.println("게시글 총 개수 : "+(int)map.get("countAll"));
 		
-		return "board/bList";
+		
+		return "board/bList2";
 	}//bList2
 	
 	
 	@GetMapping("bView2") //게시글1개 가져오기
-	public String bView2(@RequestParam(defaultValue = "1") int bno,Model model) {
+	public String bView2(@RequestParam(defaultValue = "1") int bno, Model model) {
 		
 		//db에서 가져오기
 		Map<String, Object> map = bService.selectOne(bno);
 		//model저장
-		model.addAttribute("map",map);
+		model.addAttribute("map", map);
 		
 		return "board/bView2";
 	}//bView2
@@ -215,9 +238,6 @@ public class BoardController {
 		
 		return "board/bInsert2";
 	}
-	
-	
-	
 	
 	
 	
