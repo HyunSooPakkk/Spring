@@ -23,6 +23,9 @@ public interface BoardMapper {
 	//조회수 1 증가
 	void bHitUp(int bno);
 	
+	//게시글 저장
+	int bInsert(BoardDto bdto);
+	
 	
 	
 	

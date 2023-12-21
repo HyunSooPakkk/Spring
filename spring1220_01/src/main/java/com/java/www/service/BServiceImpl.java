@@ -42,4 +42,12 @@ public class BServiceImpl implements BService {
 		return map;
 	}
 
+	//게시글 저장
+	@Override
+	public void bInsert(BoardDto bdto) {
+		int result = boardMapper.bInsert(bdto);
+		System.out.println("bServiceImpl result: "+result);
+		
+	}
+
 }

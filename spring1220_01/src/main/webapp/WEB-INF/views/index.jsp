@@ -22,8 +22,8 @@
 	        <li><strong style="font-size:20px;">${session_name}님 환영합니다.</strong></li>
 	        <a href="member/logout"><li>로그아웃</li></a>
 	    </c:if>
-	    
 	    <a href="board/bList"><li>공지사항리스트</li></a>
+	    
 	    <br>
 	    <a href="board/bInsert2"><li>다중업로드</li></a>
 	    <a href="board/bList2"><li>다중업로드리스트</li></a>

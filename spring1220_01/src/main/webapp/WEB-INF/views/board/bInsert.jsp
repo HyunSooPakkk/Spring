@@ -18,7 +18,7 @@
     <h1>관리자 글쓰기</h1>
     <hr>
 
-    <form action="write.do" name="write" method="post">
+    <form action="bInsert" name="insertFrm" method="post" enctype="multipart/form-data">
       <table>
         <colgroup>
           <col width="15%">
@@ -27,32 +27,32 @@
         <tr>
           <th>작성자</th>
           <td>
-            <input type="text" name="bName">
+            <input type="text" name="id">
           </td>
         </tr>
         <tr>
           <th>제목</th>
           <td>
-            <input type="text" name="bTitle">
+            <input type="text" name="btitle">
           </td>
         </tr>
         <tr>
           <th>내용</th>
           <td>
-            <textarea name="bContent" cols="50" rows="10"></textarea>
+            <textarea name="bcontent" cols="50" rows="10"></textarea>
           </td>
         </tr>
         <tr>
           <th>이미지 표시</th>
           <td>
-            <input type="file" name="file" id="file">
+            <input type="file" name="files" id="file">
           </td>
         </tr>
       </table>
       <hr>
       <div class="button-wrapper">
         <button type="submit" class="write">작성완료</button>
-        <button type="button" class="cancel" onclick="javascript:location.href='list.do'">취소</button>
+        <button type="button" class="cancel" onclick="javascript:location.href='/'">취소</button>
       </div>
     </form>
 

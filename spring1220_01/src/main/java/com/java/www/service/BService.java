@@ -12,6 +12,9 @@ public interface BService {
 
 	//게시글 하나 가져오기 - 뷰
 	Map<String, Object> selectOne(int bno);
+
+	//게시글 저장
+	void bInsert(BoardDto bdto);
 	
 	
 

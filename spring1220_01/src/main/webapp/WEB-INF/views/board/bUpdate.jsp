@@ -15,12 +15,13 @@
 </head>
 <body>
 <section>
-    <h1>게시글수정</h1>
+    <h1>게시글 수정</h1>
     <hr>
 
-    <form action="modify.do" name="modify" method="post">
+    <form action="doBUpdate" name="updateFrm" method="post" enctype="multipart/form-data">
       <table>
-      <input type="hidden" name="bId" value="">
+      <input type="hidden" name="bfile" value="">
+      <input type="hidden" name="bno" value="">
         <colgroup>
           <col width="15%">
           <col width="85%">
