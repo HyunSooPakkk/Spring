@@ -38,18 +38,18 @@
 					 		$("#id").val("");
 					 		$("#id").focus();
 					 		$("chkTxt").text("아이디 사용 불가");
-					 		$("chkTxt").css({"color":"red","font-weight":"900"})
+					 		$("chkTxt").css({"color":"red","font-weight":"900"});
 					 		return false;
 					 	}else{
 					 		alert("사용 가능한 아이디입니다.");
 					 		$("#chkTxt").text("아이디 사용 가능");
-					 		$("chkTxt").css({"color":"blue","font-weight":"900"})
+					 		$("chkTxt").css({"color":"blue","font-weight":"900"});
 					 	}
 					 	console.log("data result: "+data.result);
-					 },
+					 },//success
 					 error: function(){
 						 alert("실패");
-					 }//success
+					 }//error
 				 });//Ajax
 			  });//idCheck function 
 		   
