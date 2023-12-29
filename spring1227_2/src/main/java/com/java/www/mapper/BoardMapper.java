@@ -11,20 +11,20 @@ import com.java.www.dto.BoardDto;
 @Mapper
 public interface BoardMapper {
 
-	//공지사항 전체가져오기
-	List<BoardDto> selectAll();
+		// 공지사항 전체 가져오기
+		List<BoardDto> selectAll();
 
-	//게시글 1개 가져오기
-	BoardDto selectOne(int bno);
+		// 게시글 1개 가져오기
+		BoardDto selectOne(int bno);
 
-	//하단 댓글 모두 가져오기
-	ArrayList<BCommentDto> bCommentSelectAll(int bno);
+		// 하단 댓글 모두 가져오기
+		List<BCommentDto> bCommentSelectAll(int bno);
 
-	//댓글 1개 저장
-	void bCommentInsert(BCommentDto cdto);
+		// 댓글 1개 저장
+		void bCommentInsert(BCommentDto cdto);
 
-	//댓글 1개 가져오기
-	BCommentDto bCommentSelectOne(int cno);
+		// 댓글 1개 가져오기
+		BCommentDto bCommentSelectOne(int cno);
 
 	
 

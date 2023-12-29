@@ -270,59 +270,58 @@ $(document).ready(function() {
 
 					<!-- 하단 댓글 저장, 수정, 삭제 시작 -->
 					<script>
-					   $(function(){
-						  let temp = 0;
-						  let bno = "${map.bdto.bno}";
-						   
-						  //댓글 1개 저장 ▶ cpw, ccontent, bno 필요 
-						  $(".replyBtn").click(function(){
-							 alert("댓글 1개를 저장합니다.");
-							 alert("bno: "+bno);
-							 
-							 let cpw = $(".replynum").val();
-							 let ccontent = $(".replyType").val();
-							 
-							//Ajax 댓글 1개 저장
-							 $.ajax({
-								url:"/customer/BCommentInsert", 
-								type:"post",
-								data:{"cpw":cpw, "ccontent":ccontent,"bno":bno},
-								dataType:"json",
-								success:function(data){
-									alert("댓글이 저장되었습니다.");
-									console.log(data);
-									
-									//태그 입력 시작
-									let hdata = "";
-									hdata += '<ul id="'+ data.cno +'">';
-									hdata += '<li class="name">'+ data.id +' <span>['+ moment(data.cdate).format("YYYY-MM-DD HH:mm:ss")+']</span></li>';
-									hdata += '<li class="txt">'+ data.ccontent +'</li>';
-									if("${session_id}" == data.id){
-										hdata += '<li class="btn">';
-										hdata += '<a class="rebtn updateBtn" style="cursor: pointer;">수정</a>&nbsp';
-										hdata += '<a class="rebtn delBtn" style="cursor: pointer;">삭제</a>';
-										hdata += '</li>';
-									}
-									hdata += '</ul>';
-									
-									$(".replyBox").prepend(hdata);
-									
-									//글쓴 내용 지우기
-									$(".replynum").val(""); 
-									$(".replyType").val("");
-									
-								},
-								error:function(){
-									alert("실패");
-								}
-							 });//Ajax
-						  });//replyBtn
-							 
-							 
-							 
-							 
-						  
-					   }); //function
+					$(function(){
+					  let temp = 0;
+					  let bno = "${map.bdto.bno}";
+					  
+				     //댓글 1개 저장
+				     $(".replyBtn").click(function(){
+						 alert("댓글을 저장합니다."); 
+						 alert("bno : "+bno);
+						 let cpw = $(".replynum").val(); 
+						 let ccontent = $(".replyType").val(); 
+						 
+					 //Ajax 댓글 1개 저장
+					 $.ajax({
+						url:"/customer/BCommentInsert", 
+						type:"post",
+						data:{"cpw":cpw,"ccontent":ccontent,"bno":bno},
+						dataType:"json",
+						success:function(data){
+							alert("댓글이 저장되었습니다.");
+							console.log(data);
+							
+							//태그 입력 시작
+							let hdata = "";
+							hdata += '<ul id="'+ data.cno +'">';
+							hdata += '<li class="name">'+ data.id +' <span>['+ moment(data.cdate).format("YYYY-MM-DD HH:mm:ss")+']</span></li>';
+							hdata += '<li class="txt">'+ data.ccontent +'</li>';
+							if("${session_id}" == data.id){
+								hdata += '<li class="btn">';
+								hdata += '<a class="rebtn updateBtn" style="cursor: pointer;">수정</a>&nbsp';
+								hdata += '<a class="rebtn delBtn" style="cursor: pointer;">삭제</a>';
+								hdata += '</li>';
+							}
+							hdata += '</ul>';
+							
+							$(".replyBox").prepend(hdata);
+							
+							//글쓴 내용 지우기
+							$(".replynum").val(""); 
+							$(".replyType").val("");
+							
+						},
+						error:function(){
+							alert("실패");
+						}
+								 }); //Ajax
+						      });//replyBtn
+							
+						      
+						      
+						      
+						      
+						}); //function
 					   
 					</script>
 					<!-- 하단 댓글 저장, 수정, 삭제 끝 -->
@@ -344,14 +343,18 @@ $(document).ready(function() {
 					<div class="replyBox">
 					
 						<!-- 반복시작 -->
-						<ul>
-							<li class="name">jjabcde <span>[2014-03-04&nbsp;&nbsp;15:01:59]</span></li>
-							<li class="txt">대박!!! 이거 저한테 완전 필요한 이벤트였어요!!</li>
+						<c:forEach var="bComment" items="${map.bCommentlist}">
+						<ul id="${bComment.cno}">
+							<li class="name">${bComment.id}<span>[${bComment.cdate}]</span></li>
+							<li class="txt">${bComment.ccontent}</li>
+							<c:if test="${session_id == bCommentDto.id}">
 							<li class="btn">
 								<a href="#" class="rebtn">수정</a>
 								<a href="#" class="rebtn">삭제</a>
 							</li>
+							</c:if>
 						</ul>
+						</c:forEach>
 						
 						<!-- 댓글수정 및 비밀글 표시 -->
 						<!-- 수정입력창 -->

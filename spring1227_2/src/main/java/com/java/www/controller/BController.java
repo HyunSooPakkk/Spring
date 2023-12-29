@@ -26,6 +26,7 @@ public class BController {
 	@Autowired BService bService;
 	@Autowired HttpSession session;
 	
+	
 	@GetMapping("notice")
 	public String notice(Model model) {
 		//page 가지고 와야 함.
@@ -34,33 +35,32 @@ public class BController {
 		//model 전송
 		model.addAttribute("list",list);
 		return "customer/notice";
-	}
+	}//notice
 	
-	@GetMapping("notice_view") //게시글 1개 가져오기
-	public String notice_view(@RequestParam(defaultValue = "1") int bno,Model model) {
-		//Service 연결
+	
+	
+	@GetMapping("notice_view") //1개 게시글 가져오기
+	public String notice_view(@RequestParam(defaultValue = "1") int bno, Model model) {
+		System.out.println("BController notice_view bno : "+bno);
+		//service 연결
 		Map<String, Object> map = bService.selectOne(bno);
-		//Model 전송
+		//model 전송
 		model.addAttribute("map", map);
-		
 		return "customer/notice_view";
-	}
+	}//notice_view
+	
 	
 	
 	@PostMapping("BCommentInsert") //댓글 1개 저장
-	@ResponseBody //Ajax 데이터 전송
+	@ResponseBody  //Ajax 데이터 전송
 	public BCommentDto BCommentInsert(BCommentDto cdto) {
-		System.out.println("BController BCommentInsert bno: "+cdto.getBno());
-		
-		//Service 연결
+		System.out.println("BController BCommentInsert bno : "+cdto.getBno());
+		//service 연결
 		BCommentDto bCommentDto = bService.bCommentInsert(cdto);
-		
 		return bCommentDto;
-	}
+	
+	}//BCommentInsert
 	
 	
 	
-	
-	
-	
-}
+}//BController
