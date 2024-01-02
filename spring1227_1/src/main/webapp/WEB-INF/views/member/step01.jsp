@@ -1,7 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <!DOCTYPE html>
 <html>
 <head>
 <title> JARDIN SHOP </title>
+
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="JARDIN SHOP" />
@@ -10,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="../css/reset.css?v=Y" />
 <link rel="stylesheet" type="text/css" href="../css/layout.css?v=Y" />
 <link rel="stylesheet" type="text/css" href="../css/content.css?v=Y" />
-<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="../js/top_navi.js"></script>
 <script type="text/javascript" src="../js/left_navi.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
@@ -214,9 +220,10 @@ $(document).ready(function() {
 					
 					<!-- STEP -->
 					<div class="stepWrap">
-						<div class="step">
+						<div class="step stepon">
 							<p class="web">STEP 01</p>
-							<p class="txt">실명확인</p>							
+							<p class="txt">실명확인</p>
+							<p class="ck"><img src="../images/bg/bg_step.png" alt="현재위치" /></p>
 						</div>
 
 						<div class="step">
@@ -229,31 +236,62 @@ $(document).ready(function() {
 							<p class="txt"><span>회원정보</span> <span>입력</span></p>
 						</div>
 
-						<div class="step stepon">
+						<div class="step">
 							<p class="web">STEP 04</p>
 							<p class="txt"><span>회원가입</span> <span>완료</span></p>
-							<p class="ck"><img src="../images/bg/bg_step.png" alt="현재위치" /></p>
 						</div>
 					</div>
 					<!-- //STEP -->
-					
-					<div class="celebrate">	
-						<div class="img"><img src="../images/txt/txt_celebrate01.png" alt="JARDIN THECOFFEE CERATOR, SINCE 1984" /></div>
-						<p class="thx">감사합니다. <span>회원가입이 완료되었습니다.</span></p>
-						<p class="txt">
-							저희 가족이 되어주셔서 감사합니다.<br/>
-							가입 시 입력하신 이메일로 가입 완료 메일이 전송되었습니다.<br/>
-							언제나 고객님께 즐겁고 소중한 시간이 되도록 최선을 다 하겠습니다.<br/><br/>
-							가입 시 입력하신 정보는 마이페이지에서 수정하실 수 있습니다.
-						</p>
+						
+
+					<div class="alertBox">
+						<ul>
+							<li>회원님의 실명확인 및 가입 여부를 확인하는 절차입니다.</li>
+							<li>회원님의 개인 정보 보호를 위해 실명확인을 실시하고 있습니다.</li>
+						</ul>
 					</div>
+
+					<script>
+						$(function(){
+							$(".nbtnMini2").click(function(){
+								alert("이메일을 발송합니다.");
+								let email = $("#email").val();
+								alert(email);
+								
+								//Ajax 전송
+								$.ajax({
+									url: "/member/email",
+									type: "post", //get, post
+									data: { "email": email}, //데이터를 개별적으로 보냄
+									//data: $("#memberFrm").serialize(), //복수개의 데이터 보낼 경우 : form에 있는 모든 입력 데이터를 한 번에 전송 : $(form태그 id값).serialize()
+									dataType: "text", //받는 파일형태 - text, json, xml
+									//contentType:"json",//※필요 시 사용. 내가 보내는 파일형태
+									success: function(data) {
+										alert("성공")
+										console.log("이메일 인증코드: " + data);
+									}, //success
+									error: function() {
+										alert("실패")
+									}//error
+								});//Ajax
+
+								
+							});
+						});//jquery
+					
+					</script>	
+
 
 					<!-- Btn Area -->
 					<div class="btnArea">
-						<div class="bCenter">
+						<div class="bCenter2">
 							<ul>
-								<li><a href="#" class="nbtnbig">메인으로</a></li>
-								<li><a href="#" class="sbtnMini">로그인</a></li>
+							<class="pta">
+								<li class="r10"><input type="text" id="email" class="w200" /></li>
+								<li><a href="#" class="nbtnMini2" style="cursor:pointer;">Email 발송</a></li>
+								<li class="w201"><hr></li>
+								<li class="r10"><input type="text" class="w200" /></li>
+								<li><a href="#" class="sbtnMini2">비밀번호 인증</a></li>
 							</ul>
 						</div>
 					</div>

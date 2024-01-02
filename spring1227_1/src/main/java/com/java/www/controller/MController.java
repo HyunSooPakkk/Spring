@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.java.www.dto.MemberDto;
+import com.java.www.service.EmailService;
 import com.java.www.service.MService;
 
 import jakarta.servlet.http.HttpSession;
@@ -19,10 +20,32 @@ public class MController {
 
 	@Autowired MService mService;
 	@Autowired HttpSession session;
+	@Autowired EmailService emailService;
+	
 	
 	@GetMapping("login")
 	public String login() {
 		return "member/login";
+	}
+	
+
+	@GetMapping("step01")
+	public String step01() {
+		return "member/step01";
+	}
+	
+	
+	@PostMapping("email")
+	@ResponseBody
+	public String email(String email) {
+		System.out.println("MController email: "+email);
+		
+		//Service 연결 >> 이메일 주소를 보냄
+		String result = emailService.mailSend(email);
+		
+		
+		
+		return result;
 	}
 	
 	

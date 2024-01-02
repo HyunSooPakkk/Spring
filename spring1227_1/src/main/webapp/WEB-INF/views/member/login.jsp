@@ -7,6 +7,7 @@
 <html>
 <head>
 <title> JARDIN SHOP </title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="JARDIN SHOP" />
