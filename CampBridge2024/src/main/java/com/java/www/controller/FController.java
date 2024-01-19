@@ -11,27 +11,61 @@ public class FController {
 		return "index";
 	}// index()
 	
+	
+	//사이트 소개 페이지
 	@GetMapping("aboutCB")
 	public String aboutCB() {
 		return "aboutCB";
 	}// aboutCB()
 	
+	
+	//개발자 소개 페이지
 	@GetMapping("developers")
 	public String developers() {
 		return "developers";
 	}// developers()
 	
 	
+	//관리자 페이지 메인
 	@GetMapping("adminPage")
 	public String adminPage() {
 		return "adminPage";
 	}// adminPage()
 	
 	
-	@GetMapping("chartjs")
-	public String chartjs() {
-		return "chartjs";
-	}// chartjs()
+	//관리자-회원 관리 페이지
+	@GetMapping("pages_users")
+	public String pages_users() {
+		return "pages_users";
+	}// pages_users()
+	
+	
+	//관리자-공지사항 페이지
+	@GetMapping("pages_faq")
+	public String pages_faq() {
+		return "pages_faq";
+	}// pages_faq()
+	
+	
+	//관리자-입점 캠핑장 페이지
+	@GetMapping("pages_campsite")
+	public String pages_campsite() {
+		return "pages_campsite";
+	}// pages_campsite()
+	
+	
+	//관리자-진행중 이벤트 페이지
+	@GetMapping("pages_events")
+	public String pages_events() {
+		return "pages_events";
+	}// pages_events()
+
+	
+	//관리자-에러404 페이지
+	@GetMapping("pages_error404")
+	public String pages_error404() {
+		return "pages_error404";
+	}// pages_error404()
 	
 	
 	

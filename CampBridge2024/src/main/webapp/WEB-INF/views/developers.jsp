@@ -32,8 +32,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/main2_0117v.css" rel="stylesheet">
-  <link href="assets/css/header3.css" rel="stylesheet">
+  <link href="assets/css/main2.css" rel="stylesheet">
+  <link href="assets/css/header.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Yummy
@@ -46,7 +46,7 @@
 
 <body>
 <!-- ======= Header ======= -->
-<%@include file="include/header3.jsp" %>
+<%@include file="include/header.jsp" %>
 <!-- End Header -->
   <!-- ======= Hero Section ======= -->
   <!-- <section id="hero" class="hero d-flex align-items-center section-bg" style="background-image: url('assets/img/developers.png')" "width=100%">

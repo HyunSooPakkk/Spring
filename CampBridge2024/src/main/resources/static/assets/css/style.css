@@ -1182,7 +1182,7 @@ h6 {
 .error-404 h1 {
   font-size: 180px;
   font-weight: 700;
-  color: #4154f1;
+  color: #808080;
   margin-bottom: 0;
   line-height: 150px;
 }
@@ -1190,12 +1190,12 @@ h6 {
 .error-404 h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #012970;
+  color: #808080;
   margin-bottom: 30px;
 }
 
 .error-404 .btn {
-  background: #51678f;
+  background: #008000;
   color: #fff;
   padding: 8px 30px;
 }
