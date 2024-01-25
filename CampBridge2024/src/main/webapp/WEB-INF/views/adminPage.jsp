@@ -216,50 +216,31 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">앤더슨</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">앤디</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6>관리자</h6>
+              <span>Administrator</span>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-person"></i>
-                <span>My Profile</span>
+                <span>My Page</span>
               </a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -291,7 +272,7 @@
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages_users">
+        <a class="nav-link collapsed" href="pages_userlist">
           <i class="bi bi-person"></i>
           <span>회원 관리</span>
         </a>
@@ -300,7 +281,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages_faq">
           <i class="bi bi-question-circle"></i>
-          <span>공지사항</span>
+          <span>공지사항 및 이벤트</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
@@ -314,7 +295,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages_events">
           <i class="bi bi-box-arrow-in-right"></i>
-          <span>진행중 이벤트</span>
+          <span>게시글 및 리뷰</span>
         </a>
       </li><!-- End Login Page Nav -->
 
@@ -354,10 +335,12 @@
         <!-- Left side columns -->
         <div class="col-lg-8">
           <div class="row">
+          
+          
+          <!-- Customers Card -->
+            <div class="col-xxl-4 col-xl-12">
 
-            <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
+              <div class="card info-card customers-card">
 
                 <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -373,22 +356,27 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">신규 입점 <span>| 오늘</span></h5>
+                  <h5 class="card-title">신규 회원 <span>| 2024-01</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-cart"></i>
+                      <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>7 업체</h6>
-                      <span class="text-success small pt-1 fw-bold">10%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6>총 1378명</h6>
+                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">증가</span>
 
                     </div>
                   </div>
-                </div>
 
+                </div>
               </div>
-            </div><!-- End Sales Card -->
+
+            </div><!-- End Customers Card -->
+          
+<div></div>
+            <!-- Sales Card -->
+            <!-- End Sales Card -->
 
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
@@ -425,42 +413,7 @@
               </div>
             </div><!-- End Revenue Card -->
 
-            <!-- Customers Card -->
-            <div class="col-xxl-4 col-xl-12">
-
-              <div class="card info-card customers-card">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">신규 회원 <span>| 2024-01</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>총 1378명</h6>
-                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">증가</span>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div><!-- End Customers Card -->
+            
 
             <!-- Reports -->
             <div class="col-12">
@@ -678,7 +631,9 @@
         <!-- Right side columns -->
         <div class="col-lg-4">
 
-          <!-- Recent Activity -->
+
+ 		<!--
+          Recent Activity
           <div class="card">
             <div class="filter">
               <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -704,7 +659,7 @@
                   <div class="activity-content">
                     <a href="#" class="fw-bold text-dark">공지사항</a>에 댓글이 등록되었습니다.
                   </div>
-                </div><!-- End activity item-->
+                </div>End activity item
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">56 min</div>
@@ -712,7 +667,7 @@
                   <div class="activity-content">
                     어쩌구
                   </div>
-                </div><!-- End activity item-->
+                </div>End activity item
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">2 hrs</div>
@@ -720,7 +675,7 @@
                   <div class="activity-content">
                     저쩌구
                   </div>
-                </div><!-- End activity item-->
+                </div>End activity item
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">1 day</div>
@@ -728,7 +683,7 @@
                   <div class="activity-content">
                   <a href="#" class="fw-bold text-dark">신규입점</a>　신청서가 등록되었습니다.
                   </div>
-                </div><!-- End activity item-->
+                </div>End activity item
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">2 days</div>
@@ -736,7 +691,7 @@
                   <div class="activity-content">
                     내일
                   </div>
-                </div><!-- End activity item-->
+                </div>End activity item
 
                 <div class="activity-item d-flex">
                   <div class="activite-label">4 weeks</div>
@@ -744,12 +699,14 @@
                   <div class="activity-content">
                    하자
                   </div>
-                </div><!-- End activity item-->
+                </div>End activity item
 
               </div>
 
             </div>
-          </div><!-- End Recent Activity -->
+          </div>End Recent Activity
+          -->
+           
 
           <!-- Budget Report -->
           <div class="card">

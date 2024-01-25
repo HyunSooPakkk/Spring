@@ -216,47 +216,28 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">앤더슨</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">앤디</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6>관리자</h6>
+              <span>Administrator</span>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-person"></i>
-                <span>My Profile</span>
+                <span>My Page</span>
               </a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
 
             <li>
               <a class="dropdown-item d-flex align-items-center" href="#">
@@ -300,7 +281,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages_faq">
           <i class="bi bi-question-circle"></i>
-          <span>공지사항</span>
+          <span>공지사항 및 이벤트</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
@@ -314,7 +295,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages_events">
           <i class="bi bi-box-arrow-in-right"></i>
-          <span>이벤트</span>
+          <span>게시글 및 리뷰</span>
         </a>
       </li><!-- End Login Page Nav -->
 
@@ -339,12 +320,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>이벤트</h1>
+      <h1>게시글 및 리뷰</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="adminPage"></a>관리자페이지 홈</li>
-          <li class="breadcrumb-item">이벤트</li>
-          <li class="breadcrumb-item active">진행중 이벤트 관리</li>
+          <li class="breadcrumb-item">게시글 및 리뷰</li>
+          <li class="breadcrumb-item active">게시글 및 리뷰 관리</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

@@ -325,7 +325,7 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="adminPage">관리자페이지 홈</a></li>
-          <li class="breadcrumb-item">입점 캠핑장</li>
+          <li class="breadcrumb-item">회원 관리</li>
           <li class="breadcrumb-item active">목록</li>
         </ol>
       </nav>
@@ -337,26 +337,26 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">캠핑장 리스트</h5>
+              <h5 class="card-title">회원 리스트</h5>
               <!-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable. Check for <a href="https://fiduswriter.github.io/simple-datatables/demos/" target="_blank">more examples</a>.</p> -->
-			  <p>현재 캠브릿지에 입점 및 활동중인 업체 목록입니다.</p>	
+			  <p>현재 캠브릿지에서 활동중인 회원 목록입니다.</p>	
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
                   <tr>
                     <th>
-                      <b>업체명</b>
+                      <b>회원명</b>
                     </th>
-                    <th>캠브릿지코드</th>
+                    <th>예약번호</th>
                     <th>지역</th>
-                    <th data-type="date" data-format="YYYY/DD/MM">입점 날짜</th>
+                    <th data-type="date" data-format="YYYY/DD/MM">가입 날짜</th>
                     <th>예약율</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Unity Pugh</td>
+                    <td><a class="userview" href="pages_userview">이름 클릭하면 회원뷰페이지로 이동</a></td>
                     <td>9958</td>
                     <td>Curicó</td>
                     <td>2005/02/11</td>
