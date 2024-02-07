@@ -87,32 +87,40 @@
 			      </tr>
 			      </c:forEach>
 			      
+			      <c:forEach var="cpsRdto" items="${list2}">
 			      <tr>
-			        <td id="No">2</td>
+			        <td id="No">${cpsRdto.cps_bno}</td>
 			        <td style="color:green; font-weight: bold;">[캠핑장리뷰]</td>
-			        <td class="table-title"><a href="../review/review_site">게시글 제목이 들어갑니다.</a></td>
-			        <td>aaa</td>
-			        <td>2024-12-31</td>
-			        <td>111</td>
+			        <td class="table-title"><a href="../review/review_site">${cpsRdto.cps_btitle}</a></td>
+			        <td>${cpsRdto.id}</td>
+			        <td>${cpsRdto.cps_bdate}</td>
+			        <td>${cpsRdto.cps_bhit}</td>
 			      </tr>
+			      </c:forEach>
 			      
+			      <c:forEach var="tdto" items="${list3}">
 			      <tr>
-			        <td id="No">3</td>
-			        <td style="color: darkorange; font-weight: bold;">[캠핑꿀팁]</td>
-			        <td class="table-title"><a href="../community/tView">게시글 제목이 들어갑니다.</a></td>
-			        <td>aaa</td>
-			        <td>2024-12-31</td>
-			        <td>111</td>
+			        <td id="No">${tdto.t_bno}</td>
+			        <td style="color:darkorange; font-weight: bold;">[캠핑꿀팁]</td>
+			        <td class="table-title"><a href="../review/review_site">${tdto.t_btitle}</a></td>
+			        <td>${tdto.id}</td>
+			        <td>${tdto.t_bdate}</td>
+			        <td>${tdto.t_bhit}</td>
 			      </tr>
+			      </c:forEach>
 			      
+			      <c:forEach var="cppRdto" items="${list4}">
 			      <tr>
-			        <td id="No">4</td>
-			        <td style="color: navy; font-weight: bold;">[캠핑용품리뷰]</td>
-			        <td class="table-title"><a href="../review/review_equip">게시글 제목이 들어갑니다.</a></td>
-			        <td>aaa</td>
-			        <td>2024-12-31</td>
-			        <td>111</td>
+			        <td id="No">${cppRdto.cpp_bno}</td>
+			        <td style="color:navy; font-weight: bold;">[캠핑용품리뷰]</td>
+			        <td class="table-title"><a href="../review/review_equip">${cppRdto.cpp_btitle}</a></td>
+			        <td>${cppRdto.id}</td>
+			        <td>${cppRdto.cpp_bdate}</td>
+			        <td>${cppRdto.cpp_bhit}</td>
 			      </tr>
+			      </c:forEach>
+			      
+			      
 		  		</div>
 		    </table>
 			 
@@ -123,15 +131,6 @@
 			      <li class="first"></li>
 			      <li class="prev"></li>
 			      <li class="num">1</li>
-			      <li class="num">2</li>
-			      <li class="num">3</li>
-			      <li class="num">4</li>
-			      <li class="num">5</li>
-			      <li class="num">6</li>
-			      <li class="num">7</li>
-			      <li class="num">8</li>
-			      <li class="num">9</li>
-			      <li class="num">10</li>
 			      <li class="next"></li>
 			      <li class="last"></li>
    			 </ul>

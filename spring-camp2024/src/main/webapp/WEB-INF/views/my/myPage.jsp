@@ -35,11 +35,22 @@
         
 		<title>마이페이지</title>
 	</head>
+	<script>
+		$(function(){
+			let id ="${session_id}"
+			$("#myInfoBtn").click(function(){
+				myInfoFrm.submit();
+			});//myInfoBtn
+		});//JQuery
+	</script>
 	<body>
 	<!-- ======= Header ======= -->
 	<%@include file="../include/header.jsp" %>
 	<!-- End Header -->
 	<section>
+	<form action="myInfo" name="myInfoFrm"  method="post">
+		<input type="hidden" name="id" value="${session_id }">
+	</form>
 		<div class="MF_all">
 		<div class="titlePM">
 			<h3>마이페이지</h3>
@@ -54,7 +65,7 @@
 						<p>스폰지밥 님</p>
 					</div>
 					<div class="setPF">
-						<a href="myInfo" class="icon-link-sawtooth"><img src="../assets/img/login/mySetting.png" alt="나의 게시물"></a>
+						<a class="icon-link-sawtooth" id="myInfoBtn"><img src="../assets/img/login/mySetting.png" alt="나의 게시물"></a>
 					</div>
 		     	</div>
 		    </div><!--proF -->
