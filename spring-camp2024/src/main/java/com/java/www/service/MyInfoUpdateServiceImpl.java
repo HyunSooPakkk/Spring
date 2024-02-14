@@ -34,7 +34,7 @@ public class MyInfoUpdateServiceImpl implements MyInfoUpdateService {
 		System.out.println("My임플 닉네임 : " + userCampdto.getNickname());
 		System.out.println("My임플 이메일 : " + userCampdto.getEmail());
 		System.out.println("My임플 전화번호 : " + userCampdto.getPhone());
-		System.out.println("My임플r 주소 : " + userCampdto.getAddress());
+		System.out.println("My임플 주소 : " + userCampdto.getAddress());
 		System.out.println("My임플 지역 : " + userCampdto.getLocal());
 
 		
