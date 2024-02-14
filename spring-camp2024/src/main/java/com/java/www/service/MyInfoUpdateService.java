@@ -7,12 +7,8 @@ public interface MyInfoUpdateService {
 	//내 정보 가져오기
 	User_campDto selectOne(String id);
 
-	//비밀번호 변경
-	String PwUpdate(User_campDto userCampdto);
-	//닉네임 변경
-	String nickNameUpdate(User_campDto userCampdto);
-	//이메일 변경
-	String emailUpdate(User_campDto userCampdto);
+	//내 정보 수정
+	String myInfoUpdate(User_campDto userCampdto);
 
 
 

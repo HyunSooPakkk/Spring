@@ -25,29 +25,23 @@ public class MyInfoUpdateServiceImpl implements MyInfoUpdateService {
 		return userCampdto;
 	}// selectOne(id)
 
-	@Override //비밀번호 변경
-	public String PwUpdate(User_campDto userCampdto) {
+	
 
-		//Mapper 연결
-		String re="";
-		int result = myInfoUpdateMapper.PwUpdate(userCampdto);
+	@Override //내 정보 수정
+	public String myInfoUpdate(User_campDto userCampdto) {
 		
-		return result+re;
-	}//PwUpdate
+		System.out.println("My임플 비밀번호 : " + userCampdto.getPw());
+		System.out.println("My임플 닉네임 : " + userCampdto.getNickname());
+		System.out.println("My임플 이메일 : " + userCampdto.getEmail());
+		System.out.println("My임플 전화번호 : " + userCampdto.getPhone());
+		System.out.println("My임플r 주소 : " + userCampdto.getAddress());
+		System.out.println("My임플 지역 : " + userCampdto.getLocal());
 
-	@Override //닉네임 변경
-	public String nickNameUpdate(User_campDto userCampdto) {
-		//Mapper 연결
-		String result = myInfoUpdateMapper.nickNameUpdate(userCampdto);
 		
-		return result;
-	}//NicknameUpdate
-
-	@Override //이메일 변경
-	public String emailUpdate(User_campDto userCampdto) {
+		
 		//Mapper 연결
-		String result = myInfoUpdateMapper.emailUpdate(userCampdto);
-				
+		String result = myInfoUpdateMapper.myInfoUpdate(userCampdto);
+						
 		return result;
 		
 	}

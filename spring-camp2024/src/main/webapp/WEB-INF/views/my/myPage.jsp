@@ -12,6 +12,8 @@
 	    <meta content="" name="keywords">
 	 	 <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 		
+		
+		
 	    <!-- Favicons -->
 	    <link href="assets/img/favicon.png" rel="icon">
 	    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -48,8 +50,8 @@
 	<%@include file="../include/header.jsp" %>
 	<!-- End Header -->
 	<section>
-	<form action="myInfo" name="myInfoFrm"  method="post">
-		<input type="hidden" name="id" value="${session_id }">
+	<form action="myInfo" name="myInfoFrm" method="post">
+		<input type="hidden" name="id" value="${session_id}">
 	</form>
 		<div class="MF_all">
 		<div class="titlePM">
@@ -60,10 +62,12 @@
 		     	<div class="photoPF">
 		     		<img src="../assets/img/login/imgPF.png">
 		     	</div>
-		     	<div class="uerSetting">
+		     	<div class="userSetting">
+		     		<c:forEach var="userCampdto" items="${list}">
 					<div class="userPF">
-						<p>스폰지밥 님</p>
+						<p>${userCampdto.id}님</p>
 					</div>
+					</c:forEach>
 					<div class="setPF">
 						<a class="icon-link-sawtooth" id="myInfoBtn"><img src="../assets/img/login/mySetting.png" alt="나의 게시물"></a>
 					</div>

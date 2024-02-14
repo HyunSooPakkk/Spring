@@ -78,7 +78,7 @@
         
         
         <div class="d-flex" data-aos="fade-up" data-aos-delay="200" style="content-align:center"></div>
-        <img src ="assets/img/developers2.png">	
+        <img src ="assets/img/TeamPhoto.jpg">	
 		<br>
 		<br>
 		<br>

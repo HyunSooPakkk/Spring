@@ -325,13 +325,7 @@
         </a>
       </li><!-- End Error 404 Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>빈 페이지</span>
-        </a>
-      </li><!-- End Blank Page Nav -->
-
+     
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -358,7 +352,7 @@
           <div class="card mb-3">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="assets/img/card.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="../assets/img/card.jpg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -375,7 +369,7 @@
 
           <!-- Card with an image on top -->
           <div class="card">
-            <img src="assets/img/card.jpg" class="card-img-top" alt="...">
+            <img src="../assets/img/card.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">이미지 상단 지정형 카드</h5>
               <p class="card-text">이벤트 설명</p>
@@ -389,7 +383,7 @@
 
           <!-- Card with an image overlay -->
           <div class="card">
-            <img src="assets/img/card.jpg" class="card-img-top" alt="...">
+            <img src="../assets/img/card.jpg" class="card-img-top" alt="...">
             <div class="card-img-overlay">
               <h5 class="card-title">이미지 오버레이형 카드</h5>
               <p class="card-text">이벤트 설명</p>

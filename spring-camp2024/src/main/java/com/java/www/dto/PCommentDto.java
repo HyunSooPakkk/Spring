@@ -11,17 +11,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PBoardDto {
+public class PCommentDto {
 
+	private int p_cno;
 	private int p_bno;
 	private String id;
-	private String p_btype;
-	private String p_btitle;
-	private String p_bcontent;
-	private Timestamp p_bdate;
-	private String p_local;
-	private int p_bnum;
-	private int p_bstatus;
-	private String p_bfile;
+	private String p_cpw;
+	private String p_ccontent;
+	private Timestamp p_cdate;
 
-}// PBoardDto
+}// PCommentDto
