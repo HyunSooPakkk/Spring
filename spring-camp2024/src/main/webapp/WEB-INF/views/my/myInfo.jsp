@@ -163,7 +163,7 @@
 						<label for="pw">기존 비밀번호</label>
 					</dt>
 					<dd>
-						<input type="password" id="pw" value="${udto.pw}" minlength="8" required />
+						<input type="password" id="pw" name="" value="${udto.pw}" minlength="8" required />
 					</dd>
 				</dl>
 				<dl id="join_pw2_dl">
