@@ -243,7 +243,7 @@ public class MyController {
 
 	// 내 정보 수정(form)
 	@PostMapping("myInfoUpdate")
-	public String myInfoUpdate(User_campDto userCampdto) {
+	public String myInfoUpdate(String nPw, User_campDto userCampdto) {
 		System.out.println("MyController 비밀번호 : " + userCampdto.getPw());
 		System.out.println("MyController 닉네임 : " + userCampdto.getNickname());
 		System.out.println("MyController 이메일 : " + userCampdto.getEmail());
