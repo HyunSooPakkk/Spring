@@ -1,5 +1,7 @@
 package com.java.www.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.java.www.dto.CppRDto;
@@ -181,7 +184,17 @@ public class MyController {
 	///////////////////////////////////////////// 마이페이지
 	// 마이페이지
 	@GetMapping("myPage")
-	public String myPage() {
+	public String myPage(Model model) {
+		
+		String id = (String) session.getAttribute("session_id");
+		System.out.println("MyController id : " + id);
+
+		// Service연결(DB)
+		User_campDto user_Campdto = myInfoUpdateService.selectOne(id);
+
+		// Model 저장 후 전송
+		model.addAttribute("udto", user_Campdto);
+		
 		return "/my/myPage";
 	}// myPage()
 
@@ -225,8 +238,9 @@ public class MyController {
 		return "/my/myRental";
 	}// myRental()
 
-	//////////////////////////////// 마이 페이지 - 내 정보
-	//////////////////////////////// 수정//////////////////////////////////
+	
+	
+	//////////////////////////////// 마이 페이지 - 내 정보 수정//////////////////////////////////
 	@PostMapping("myInfo") // 내 정보 가져오기
 	public String myInfo(User_campDto userCampdto, Model model) {
 
@@ -241,22 +255,43 @@ public class MyController {
 		return "/my/myInfo";
 	}// myInfo()
 
+	
 	// 내 정보 수정(form)
-	@PostMapping("myInfoUpdate")
-	public String myInfoUpdate(String nPw, User_campDto userCampdto) {
+	@PostMapping("doUpdate")
+	public String myInfoUpdate(String nPw, User_campDto userCampdto, MultipartFile myfile, Model model) throws Exception {
+		System.out.println("MyController 아이디 : " + userCampdto.getId());
 		System.out.println("MyController 비밀번호 : " + userCampdto.getPw());
 		System.out.println("MyController 닉네임 : " + userCampdto.getNickname());
 		System.out.println("MyController 이메일 : " + userCampdto.getEmail());
 		System.out.println("MyController 전화번호 : " + userCampdto.getPhone());
 		System.out.println("MyController 주소 : " + userCampdto.getAddress());
 		System.out.println("MyController 지역 : " + userCampdto.getLocal());
+		System.out.println("MyController 파일 : " + userCampdto.getM_img());
+		
+		if (!myfile.isEmpty()) {
+			String oriFName = myfile.getOriginalFilename();
+			long time = System.currentTimeMillis();
+			String upFName = time + "_" + oriFName; // String upName = String.format("%s_%d", oriFName, time)
+			String upload = "c:/upload/"; // 파일업로드 위치
 
-		// Service, Mapper
-		myInfoUpdateService.myInfoUpdate(userCampdto);
+			//파일업로드
+			File f = new File(upload + upFName);
+			myfile.transferTo(f);
 
-		return "/my/myInfoUpdate";
+			//userCampdto파일이름 저장
+			userCampdto.setM_img(upFName);
+		} else {
+			userCampdto.setM_img("");
+		} //if(myfile)
+
+		//Service, Mapper
+		String result = myInfoUpdateService.myInfoUpdate(userCampdto);
+		System.out.println("컨트롤러 result : "+result);
+		model.addAttribute("result", result);
+		
+		return "/my/doUpdate";
 	}// myInfoUpdate()
 
-	///////////////////////////////////////////// 마이페이지
+	////////////////////////////////마이 페이지 - 내 정보 수정 끝//////////////////////////////////
 
 }

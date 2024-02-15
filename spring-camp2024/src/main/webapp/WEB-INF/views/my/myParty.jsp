@@ -93,7 +93,7 @@
 			 						<strong>계곡 주변 캠핑장</strong>
 			 					</div>
 			 					<div class="recruitv">
-					 				<p>모집중</p>
+					 				<p>모집완료</p>
 					 			</div>
 		 					</div>
 		 					<div class="moim" >

@@ -64,22 +64,26 @@
 						        <col width="13%">
 				   			</colgroup>
 						    <tr>
-						       <th style="text-align: left;"><strong>캠핑장 이름</strong></th>
-						       <th style="text-align: left;"><span>경기용인카라반캠핑장</span></th>
+						       <th style="text-align: left;"><strong>캠핑용품명</strong></th>
+						       <th style="text-align: left;"><span>2인 패키지</span></th>
 						       <th style="text-align: left;"><strong>DATE</strong></th>
-						       <th>2019-12-11</th>
+						       <th>2023-10-11</th>
 						    </tr>
 						    <tr style="border-bottom: 2px solid #009223;">
-						       <td style="text-align: left; font-size: 15px;"><strong>NAME</strong></td>
-						       <td style="font-size: 15px; text-align: left;">뿌라빠파</td>
+						       <td style="text-align: left; font-size: 15px;"><strong>회원명</strong></td>
+						       <td style="font-size: 15px; text-align: left;">길동잉</td>
 						       <td style="text-align: left; font-size: 15px;"><strong>HIT</strong></td>
-						       <td style="font-size: 15px; text-align: left;">123</td>
+						       <td style="font-size: 15px; text-align: left;">247</td>
 						    </tr>
 									<tr>
 										<td>
 											<div class="data-bd-cont">
-												<div id=MS_WritenBySEB>얼른 구매하세용~</div>
-												<br> <img src="../assets/img/campReview/review2.jpg"
+												<div id=MS_WritenBySEB>
+												친구랑 주말 글램핑 다녀왔는데 딱 필수템 구성이라 좋아요 :) <br>
+												따로 구매하려고 했던 것들이 패키지에 포함되어 있어서 개이득 ㅎㅎㅎ <br>
+												맛있는 것도 많이 먹고 알차게 잘 놀고왔습니다 ! 강추 !! <br>
+												</div>
+												<br> <img src="../assets/img/campReview/2인패키지.png"
 													style="width: 400px; height: 300px;">
 											</div>
 										</td>
@@ -146,11 +150,11 @@
 
 						<!-- 댓글보기 시작-->
 						<table style="margin-top: 70px; position: relative; top: -100px; font-size: 14px; width: 1100px;">
-						<td style="font-weight: 700; border-bottom: 2px solid #eee;">총<strong style="color: #009223">&nbsp;&nbsp;5</strong>&nbsp;개의 댓글이 등록되었습니다.</td>
+						<td style="font-weight: 700; border-bottom: 2px solid #eee;">총<strong style="color: #009223">&nbsp;&nbsp;3</strong>&nbsp;개의 댓글이 등록되었습니다.</td>
 						<tr>
-							<td style="border-bottom: 2px solid #eee;"><strong>댓글 작성자</strong> | <span style="color: blue;">aaa</span>&nbsp;&nbsp;<span>[2024-12-12 15:27:23:00]</span>
-								<li id="replyTxt">&nbsp;&nbsp;댓글 내용이 들어갑니다. <br>
-								ex)이벤트	너무 좋아요! 꼭 참여해서 혜택받아볼게요!
+							<td style="border-bottom: 2px solid #eee;"><strong>아웃도어처돌이</strong> | <span style="color: blue;">letsmove</span>&nbsp;&nbsp;<span>[2024-02-13 15:27:23:00]</span>
+								<li id="replyTxt">&nbsp;&nbsp;와 둘이 간단히 꾸려서 휙 다녀오기 좋은 구성이네요~ <br>
+								  친구분과 좋은 시간이었겠어요, 사진도 너무 예뻐요 ㅎㅎ
 								</li>
 								<li id="replyBtn">
 									<button id="rDelBtn">삭제</button>
@@ -159,9 +163,9 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="border-bottom: 2px solid #eee;"><strong>댓글 작성자</strong> | <span style="color: blue;">aaa</span>&nbsp;&nbsp;<span>[2024-12-12 15:27:23:00]</span>
-								<li id="replyTxt">&nbsp;&nbsp;댓글 내용이 들어갑니다. <br>
-								ex)이벤트	너무 좋아요! 꼭 참여해서 혜택받아볼게요!
+							<td style="border-bottom: 2px solid #eee;"><strong>떠날랜드</strong> | <span style="color: blue;">letsgo</span>&nbsp;&nbsp;<span>[2024-01-29 11:07:01:00]</span>
+								<li id="replyTxt">&nbsp;&nbsp;날씨 좋을 때 가셨네요 <br>
+								캠브릿지 2인 패키지는 정말 믿고 대여하는 것 같아요 ㅋㅋㅋ
 								</li>
 								<li id="replyBtn">
 									<button id="rDelBtn">삭제</button>
@@ -170,9 +174,9 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="border-bottom: 2px solid #eee;"><strong>댓글 작성자</strong> | <span style="color: blue;">aaa</span>&nbsp;&nbsp;<span>[2024-12-12 15:27:23:00]</span>
-								<li id="replyTxt">&nbsp;&nbsp;댓글 내용이 들어갑니다. <br>
-								ex)이벤트	너무 좋아요! 꼭 참여해서 혜택받아볼게요!
+							<td style="border-bottom: 2px solid #eee;"><strong>초보캠퍼응애</strong> | <span style="color: blue;">letsdive</span>&nbsp;&nbsp;<span>[2023-11-17 14:38:22:35]</span>
+								<li id="replyTxt">&nbsp;&nbsp;저 텐트는 방풍이 잘 되나요..? <br>
+								캠핑 입문자라 장비에 대해서 1도 모르겠네여 ,,
 								</li>
 								<li id="replyBtn">
 									<button id="rDelBtn">삭제</button>
@@ -180,29 +184,7 @@
 								</li>
 							</td>
 						</tr>
-						<tr>
-							<td style="border-bottom: 2px solid #eee;"><strong>댓글 작성자</strong> | <span style="color: blue;">aaa</span>&nbsp;&nbsp;<span>[2024-12-12 15:27:23:00]</span>
-								<li id="replyTxt">&nbsp;&nbsp;댓글 내용이 들어갑니다. <br>
-								ex)이벤트	너무 좋아요! 꼭 참여해서 혜택받아볼게요!
-								</li>
-								<li id="replyBtn">
-									<button id="rDelBtn">삭제</button>
-									<button id="rUBtn">수정</button>
-								</li>
-							</td>
-						</tr>
-						<tr>
-							<td style="border-bottom: 2px solid #eee;"><strong>댓글 작성자</strong> | <span style="color: blue;">aaa</span>&nbsp;&nbsp;<span>[2024-12-12 15:27:23:00]</span>
-									<li id="replyTxt">&nbsp;&nbsp;댓글 내용이 들어갑니다.
-									 <br>
-									ex)이벤트	너무 좋아요! 꼭 참여해서 혜택받아볼게요!
-									</li>
-									<li id="replyBtn">
-										<button id="rDelBtn">삭제</button>
-										<button id="rUBtn">수정</button>
-									</li>
-								</td>
-							</tr>
+						
 						</table>
 						<!-- 댓글보기 끝-->
 						</div>

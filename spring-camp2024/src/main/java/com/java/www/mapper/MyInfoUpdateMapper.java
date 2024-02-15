@@ -12,7 +12,7 @@ public interface MyInfoUpdateMapper {
 
 
 	//내 정보 수정
-	String myInfoUpdate(User_campDto userCampdto);
+	int myInfoUpdate(User_campDto userCampdto);
 	
 	
 	

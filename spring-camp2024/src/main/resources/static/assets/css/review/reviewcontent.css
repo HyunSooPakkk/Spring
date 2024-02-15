@@ -639,11 +639,15 @@ cont-sub-des span {margin-right: 15px; color: #343434;}
 	font-weight: bold;
 }
 em {font-style: normal;}
+
 .bbs-table-view .data-bd-cont {
+	font-size: 14px;
+	width: 500px;
 	height:500px;
 	padding: 20px 0 40px 0;
 	color: #8d8d8d;
 }
+
 legend {
 	display: none;
 	margin: 0;

@@ -20,8 +20,6 @@ public class MyInfoUpdateServiceImpl implements MyInfoUpdateService {
 		System.out.println("MyInfoServiceImpl : "+id);
 		User_campDto userCampdto = myInfoUpdateMapper.selectOne(id);
 		
-		System.out.println("User_campDto.email : " +userCampdto.getEmail());
-		
 		return userCampdto;
 	}// selectOne(id)
 
@@ -36,14 +34,17 @@ public class MyInfoUpdateServiceImpl implements MyInfoUpdateService {
 		System.out.println("My임플 전화번호 : " + userCampdto.getPhone());
 		System.out.println("My임플 주소 : " + userCampdto.getAddress());
 		System.out.println("My임플 지역 : " + userCampdto.getLocal());
+		System.out.println("My임플 파일 : " + userCampdto.getM_img());
 
-		
+			
 		
 		//Mapper 연결
-		String result = myInfoUpdateMapper.myInfoUpdate(userCampdto);
-						
-		return result;
+		String re =""; 
+		int result = myInfoUpdateMapper.myInfoUpdate(userCampdto);
 		
+		System.out.println("service Impl 정보수정 : "+result);
+		
+		return result+re;
 	}
 
 

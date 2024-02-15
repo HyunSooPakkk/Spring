@@ -38,7 +38,7 @@
 	
 		<section class="myList">
 			<!-- 자유게시판 리스트 -->
-			<img src="../assets/img/myList_icon.png">
+			<img src="../assets/img/mypage/myList_icon.png">
 	    	<h1>나의 게시글</h1>
 		    <!-- 검색창 -->
 		    <div class="searchDiv">

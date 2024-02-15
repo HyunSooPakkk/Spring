@@ -101,15 +101,16 @@
 							<ul>
 								<li class="item item1">
 									<div class="image">										
-										<img src="../assets/img/campReview/campReview.jpg"
+										<img src="../assets/img/campReview/2인패키지.png"
 											style="width: 100%; height: 200px; border-radius: 10px;" />
 									</div>
 									<div class="cont">
-										<strong>카라반캠핑장추천해요</strong>
-										<p>뿌라빠파님</p>
-										<p>경기용인카라반</p>
+										<strong>2인 패키지 대여 후기</strong>
+										<p>${session_id}님</p>
+										<p>캠브릿지 2인 패키지</p>
 										<p>
-											안녕하세요. 경기카라반 <br>캠핑장 입니다. 저희...
+											친구랑 주말 글램핑 다녀왔는데 <br>
+											딱 필수템 구성이예요 좋아요 :) <br>
 										</p>
 										<div class="heartwrap">
 											<span class="date"><i class="fa fa-clock-o"
@@ -121,21 +122,24 @@
 										<a href="review_equip">바로가기</a>
 									</div>
 								</li>
+								
+								
 								<li class="item item1">
 									<div class="image">
-										<img src="../assets/img/campReview/campReview.jpg"
+										<img src="../assets/img/campReview/매트.png"
 											style="width: 260px; height: 200px; border-radius: 10px;" />
 									</div>
 									<div class="cont">
-										<strong>카라반캠핑장</strong>
-										<p>경기도 > 용인시 > 동막골</p>
-										<p>010-****-****</p>
+										<strong>폭신폭신</strong>
+										<p>${session_id}님</p>
+										<p>4인용 방수매트</p>
 										<p>
-											안녕하세요. 경기카라반 <br>캠핑장 입니다. 저희...
+											음료수 쏟아서 바로 닦았는데 <br>
+											스며드는 것 없이 깔끔하게 닦였어요<br>
 										</p>
 										<div class="heartwrap">
 											<span class="date"><i class="fa fa-clock-o"
-												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">269</span>
+												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">82</span>
 											<img
 												src="https://www.5gcamp.com/modules/usemarket/theme/_pc/default/image/heart-o.svg"
 												alt="" width="20" class="heart1">
@@ -143,56 +147,104 @@
 										<a href="review_equip">바로가기</a>
 									</div>
 								</li>
+								
+								
 								<li class="item item1">
 									<div class="image">
-										<img src="../assets/img/campReview/campReview.jpg"
+										<img src="../assets/img/campReview/4인테이블의자.png"
 											style="width: 260px; height: 200px; border-radius: 10px;" />
 									</div>
 									<div class="cont">
-										<strong>카라반캠핑장</strong>
-										<p>경기도 > 용인시 > 동막골</p>
-										<p>010-****-****</p>
+										<strong>완전 편해요</strong>
+										<p>${session_id}님</p>
+										<p>4인 테이블 의자</p>
 										<p>
-											안녕하세요. 경기카라반 <br>캠핑장 입니다. 저희...
+											캠핑용이 다 비슷비슷해서 <br>
+											별 기대 안했는데 편해요! <br>
 										</p>
 										<div class="heartwrap">
 											<span class="date"><i class="fa fa-clock-o"
-												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">269</span>
+												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">170</span>
 											<img
 												src="https://www.5gcamp.com/modules/usemarket/theme/_pc/default/image/heart-o.svg"
 												alt="" width="20" class="heart1">
 										</div>
-										<a href="equipReview">바로가기</a>
+										<a href="review_equip">바로가기</a>
 									</div>
 								</li>
-								<li class="item item4">
-									<div class="image">사진</div>
+								
+								
+								<li class="item item1">
+									<div class="image">
+										<img src="../assets/img/campReview/그릴.png"
+											style="width: 260px; height: 200px; border-radius: 10px;" />
+									</div>
 									<div class="cont">
-										<strong>캠핑장이름</strong>
-										<p>캠핑장주소</p>
-										<p>캠핑장연락처</p>
-										<p>캠핑장소개내용</p>
-										<a href="equipReview">바로가기</a>
+										<strong>이 그릴 가성비 끝판왕</strong>
+										<p>${session_id}님</p>
+										<p>바베큐 그릴</p>
+										<p>
+											고기 안 눌러붙고 좋아요 <br>
+											숯 넣을 공간도 넉넉합니다 <br>
+										</p>
+										<div class="heartwrap">
+											<span class="date"><i class="fa fa-clock-o"
+												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">74</span>
+											<img
+												src="https://www.5gcamp.com/modules/usemarket/theme/_pc/default/image/heart-o.svg"
+												alt="" width="20" class="heart1">
+										</div>
+										<a href="review_equip">바로가기</a>
 									</div>
 								</li>
-								<li class="item item5">
-									<div class="image">사진</div>
+								
+								
+								<li class="item item1">
+									<div class="image">
+										<img src="../assets/img/campReview/텐트.png"
+											style="width: 260px; height: 200px; border-radius: 10px;" />
+									</div>
 									<div class="cont">
-										<strong>캠핑장이름</strong>
-										<p>캠핑장주소</p>
-										<p>캠핑장연락처</p>
-										<p>캠핑장소개내용</p>
-										<a href="equipReview">바로가기</a>
+										<strong>방풍, 방충 개굿</strong>
+										<p>${session_id}님</p>
+										<p>2-3인용 텐트</p>
+										<p>
+											얇은데 바람 잘 막아지고 <br>
+											방충망 엄청 탄탄해여 <br>
+										</p>
+										<div class="heartwrap">
+											<span class="date"><i class="fa fa-clock-o"
+												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">155</span>
+											<img
+												src="https://www.5gcamp.com/modules/usemarket/theme/_pc/default/image/heart-o.svg"
+												alt="" width="20" class="heart1">
+										</div>
+										<a href="review_equip">바로가기</a>
 									</div>
 								</li>
-								<li class="item item6">
-									<div class="image">사진</div>
+								
+								
+								<li class="item item1">
+									<div class="image">
+										<img src="../assets/img/campReview/랜턴.png"
+											style="width: 260px; height: 200px; border-radius: 10px;" />
+									</div>
 									<div class="cont">
-										<strong>캠핑장이름</strong>
-										<p>캠핑장주소</p>
-										<p>캠핑장연락처</p>
-										<p>캠핑장소개내용</p>
-										<a href="equipReview">바로가기</a>
+										<strong>딱 적당한 밝기</strong>
+										<p>${session_id}님</p>
+										<p>충전식 LED 랜턴</p>
+										<p>
+											야외 나들이용으로 장만했는데 <br>
+											한 번 충전하면 엄청 오래가요 <br>
+										</p>
+										<div class="heartwrap">
+											<span class="date"><i class="fa fa-clock-o"
+												aria-hidden="true"></i> 1년 전</span> <span class="reviewhit">183</span>
+											<img
+												src="https://www.5gcamp.com/modules/usemarket/theme/_pc/default/image/heart-o.svg"
+												alt="" width="20" class="heart1">
+										</div>
+										<a href="review_equip">바로가기</a>
 									</div>
 								</li>
 							</ul>

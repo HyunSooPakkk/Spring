@@ -41,7 +41,7 @@
 	<%@include file="../include/header.jsp"  %>
 	<!-- End Header -->
 	<section>
-		<form name="myInfoUpdateFrm" method="post" action="myInfoUpdate">
+		<form name="myInfoUpdateFrm" method="post" action="doUpdate" enctype="multipart/form-data">
 			<div id="subBanner"></div>
 			<div id="sub_top_area">
 				<h3>내 정보 수정</h3>
@@ -65,8 +65,6 @@
 						$("#pwCheckTxt").css("color","red");
 					}//if-else(비밀번호 변경 확인)
 				});//#nPw.keyup
-				
-				
 				
 				
 				
@@ -96,18 +94,6 @@
 				});	
 				
 				
-				//지역
-				/* $("input:checkbox").change(function(){
-					 if(this.checked){
-					    $(this).attr('value', $("#local").val());
-					 }else{
-					    $(this).attr('value', $("#local").val());
-					 }
-				}); */
-				
-				
-				
-				
 				
 				
 			   //수정버튼 클릭	
@@ -134,8 +120,8 @@
 						<label for="name">프로필 사진</label>
 					</dt>
 					<dd class="photoBoxMI">
-						<div class="photoMI"><img src="${udto.m_img}"></div>
-			          	<div class="inputMI" ><input type="file" name="files" id="files"></div>
+						<div class="photoMI"><img src="../upload/${udto.m_img}"></div>
+			          	<div class="inputMI"><input type="file" name="myfile" id="files"></div>
 					</dd>
 				</dl>
 				
@@ -155,6 +141,7 @@
 					</dt>
 					<dd>
 						${udto.id}
+						<input type="hidden" name="id" value="${udto.id}">
 					</dd>
 				</dl>
 				<dl id="join_pw1_dl">
@@ -163,7 +150,7 @@
 						<label for="pw">기존 비밀번호</label>
 					</dt>
 					<dd>
-						<input type="password" id="pw" name="" value="${udto.pw}" minlength="8" required />
+						<input type="password" id="pw" name="pw1" value="${udto.pw}" minlength="8" required />
 					</dd>
 				</dl>
 				<dl id="join_pw2_dl">
