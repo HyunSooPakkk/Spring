@@ -25,7 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.java.www.dto.CppRDto;
-import com.java.www.dto.CpsRDto;
+import com.java.www.dto.Cps_reviewDto;
 import com.java.www.dto.FBoardDto;
 import com.java.www.dto.KakaoDto;
 import com.java.www.dto.LogoutDto;
@@ -202,24 +202,26 @@ public class MyController {
 	@GetMapping("myList")
 	public String myList(Model model) {
 		System.out.println("MyController : " + 1);
-
+		String id = (String) session.getAttribute("session_id");
+		System.out.println("마이컨트롤러 id: "+ id);
+		
 		// 자유게시판 리스트(게시물 3개) 가져오기
-		ArrayList<FBoardDto> list = myboardService.fbList();
+		ArrayList<FBoardDto> list = myboardService.fbList(id);
 		// Model에 자유게시판 데이터 담기
 		model.addAttribute("list", list);
 
 		// 캠핑장리뷰 리스트(게시물 3개) 가져오기
-		ArrayList<CpsRDto> list2 = myboardService.cpsRList();
+		ArrayList<Cps_reviewDto> list2 = myboardService.cpsRList(id);
 		// Model에 자유게시판 데이터 담기
 		model.addAttribute("list2", list2);
 
 		// 캠핑꿀팁 리스트(게시물 3개) 가져오기
-		ArrayList<TBoardDto> list3 = myboardService.tList();
+		ArrayList<TBoardDto> list3 = myboardService.tList(id);
 		// Model에 자유게시판 데이터 담기
 		model.addAttribute("list3", list3);
 
 		// 캠핑용품리뷰 리스트(게시물 3개) 가져오기
-		ArrayList<CppRDto> list4 = myboardService.cppRList();
+		ArrayList<CppRDto> list4 = myboardService.cppRList(id);
 		// Model에 자유게시판 데이터 담기
 		model.addAttribute("list4", list4);
 

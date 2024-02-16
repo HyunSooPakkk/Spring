@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class CpsRDto {
+public class Cps_reviewDto {
 
 	private int cps_bno;
 	private String id;

@@ -50,6 +50,29 @@
 			<!-- 항목별 정보 수정 스크립트 시작 -->
 			<script> 
 			$(function(){
+				
+				//프로필 사진
+			       $(document).ready(function() {
+					    // 파일이 변경되었을 때 이벤트 핸들러 추가
+					    $('#m_img').on('change', function(event) {
+					        var input = event.target;
+					        if (input.files && input.files[0]) {
+					        // 파일이 선택되었을 때
+					        var reader = new FileReader();
+					        reader.onload = function(e) {
+					        $('#previewImage').attr('src', e.target.result);
+					            }
+					        reader.readAsDataURL(input.files[0]);
+					        } else {
+					        // 파일이 선택되지 않았을 때
+					        $('#previewImage').attr('src', '../assets/img/mypage/profile.png'); // 대체할 이미지 경로로 변경
+					        }
+					    });
+					});//프로필 사진
+				
+				
+				
+				
 				//비밀번호
 				$("#nPw").keyup(function(){
 					if($("#nPw").val()==""){
@@ -108,6 +131,9 @@
 			   		myInfoUpdateFrm.submit();
 			  	});//UpdateBtn
 			});//JQuery
+			
+			
+			
 			</script>
 			<!-- 항목별 정보 수정 스크립트 끝 -->
 			
@@ -120,8 +146,8 @@
 						<label for="name">프로필 사진</label>
 					</dt>
 					<dd class="photoBoxMI">
-						<div class="photoMI"><img src="../upload/${udto.m_img}"></div>
-			          	<div class="inputMI"><input type="file" name="myfile" id="files"></div>
+						<div class="photoMI"><img id="previewImage" style="width:100%;" src="../upload/${udto.m_img}"></div>
+			          	<div class="inputMI"><input type="file" name="myfile" id="m_img" onchange="previewImage(event)"></div>
 					</dd>
 				</dl>
 				

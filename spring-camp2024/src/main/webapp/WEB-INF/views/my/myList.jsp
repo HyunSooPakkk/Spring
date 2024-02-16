@@ -38,7 +38,7 @@
 	
 		<section class="myList">
 			<!-- 자유게시판 리스트 -->
-			<img src="../assets/img/mypage/myList_icon.png">
+			<img src="../assets/img/mypage/myList.png">
 	    	<h1>나의 게시글</h1>
 		    <!-- 검색창 -->
 		    <div class="searchDiv">
@@ -82,7 +82,9 @@
 			        </td>
 			        <td class="table-title"><a href="../community/fView">${fdto.f_btitle}</a></td>
 			        <td>${fdto.id}</td>
-			        <td>${fdto.f_bdate}</td>
+			        <td>
+			        <fmt:formatDate value="${fdto.f_bdate}" pattern="yyyy-MM-dd"/>
+			        </td>
 			        <td>${fdto.f_bhit}</td>
 			      </tr>
 			      </c:forEach>
@@ -93,7 +95,9 @@
 			        <td style="color:green; font-weight: bold;">[캠핑장리뷰]</td>
 			        <td class="table-title"><a href="../review/review_site">${cpsRdto.cps_btitle}</a></td>
 			        <td>${cpsRdto.id}</td>
-			        <td>${cpsRdto.cps_bdate}</td>
+			        <td>
+			        <fmt:formatDate value="${cpsRdto.cps_bdate}" pattern="yyyy-MM-dd"/>
+			        </td>
 			        <td>${cpsRdto.cps_bhit}</td>
 			      </tr>
 			      </c:forEach>
@@ -102,9 +106,11 @@
 			      <tr>
 			        <td id="No">${tdto.t_bno}</td>
 			        <td style="color:darkorange; font-weight: bold;">[캠핑꿀팁]</td>
-			        <td class="table-title"><a href="../review/review_site">${tdto.t_btitle}</a></td>
+			        <td class="table-title"><a href="../community/tView">${tdto.t_btitle}</a></td>
 			        <td>${tdto.id}</td>
-			        <td>${tdto.t_bdate}</td>
+			        <td>
+			        <fmt:formatDate value="${tdto.t_bdate}" pattern="yyyy-MM-dd"/>
+			        </td>
 			        <td>${tdto.t_bhit}</td>
 			      </tr>
 			      </c:forEach>
@@ -115,7 +121,9 @@
 			        <td style="color:navy; font-weight: bold;">[캠핑용품리뷰]</td>
 			        <td class="table-title"><a href="../review/review_equip">${cppRdto.cpp_btitle}</a></td>
 			        <td>${cppRdto.id}</td>
-			        <td>${cppRdto.cpp_bdate}</td>
+			        <td>
+			        <fmt:formatDate value="${cppRdto.cpp_bdate}" pattern="yyyy-MM-dd"/>
+			        </td>
 			        <td>${cppRdto.cpp_bhit}</td>
 			      </tr>
 			      </c:forEach>

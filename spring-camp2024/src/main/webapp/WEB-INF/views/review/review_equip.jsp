@@ -119,13 +119,13 @@
 							</tr>
 						</div>
 
-<!-- 이전글/다음글 시작-->
+						<!-- 이전글/다음글 시작-->
 						<table style="margin-top: -80px; position: relative; top: 120px; font-size: 14px; width: 1100px;">
 							<tr>
-								<td colspan="4" style="border-bottom: 2px solid #eee;"><strong>다음글</strong> <span class="separator">|</span><a href="#"> [키즈잼] 2월 프로그램 안내</a></td>
+								<td colspan="4" style="border-bottom: 2px solid #eee;"><strong>다음글</strong> <span class="separator">|</span><a href="#"> [키즈캠핑] 4월 부모님과 함께하는 카크닉 프로그램 안내</a></td>
 							</tr>
 							<tr>
-								<td colspan="4"><strong>이전글</strong> <span class="separator">|</span><a href="#"> [키즈잼] 2020년 1분기 정기 휴관일 안내</a></td>
+								<td colspan="4"><strong>이전글</strong> <span class="separator">|</span><a href="#"> [휴무공지] 2024년 1분기 캠핑장별 정기 휴무 안내</a></td>
 							</tr>
 						</table>
 						<!-- 이전글/다음글 끝-->
